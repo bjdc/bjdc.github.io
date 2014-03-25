@@ -151,26 +151,26 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(14);
-  mytxt[0]="";
-  mytxt[1]="";
-  mytxt[2]="";
-  mytxt[3]="";
-  mytxt[4]="";
-  mytxt[5]="";
-  mytxt[6]="";
-  mytxt[7]="";
-  mytxt[8]="";
-  mytxt[9]="";
-  mytxt[10]="";
-  mytxt[11]="";
-  mytxt[12]="";
-  mytxt[13]="";
+  mytxt[0]="凡人，找死！";
+  mytxt[1]="晋磊！拿命来！";
+  mytxt[2]="少恭，你还嫩了点！";
+  mytxt[3]="说了要一起上吧！";
+  mytxt[4]="请无异来帮忙吧！";
+  mytxt[5]="吾友，你弱了！";
+  mytxt[6]="我甩发，我自信！";
+  mytxt[7]="太弱了！";
+  mytxt[8]="凡人，自寻死路！";
+  mytxt[9]="你们还差了点！";
+  mytxt[10]="徒儿，随为师回山！";
+  mytxt[11]="神兽果然勇猛！";
+  mytxt[12]="真是美味啊！";
+  mytxt[13]="你见不到少恭了！→_→";
 
 
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "你打败了<strong>欧阳少恭</strong>" : mytxt[text3(maxscore)-3];
+  var message = won ? "你打败了<strong>欧阳少恭！</strong>" : mytxt[text3(maxscore)-3];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
