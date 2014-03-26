@@ -54,23 +54,23 @@ HTMLActuator.prototype.clearContainer = function (container) {
 HTMLActuator.prototype.addTile = function (tile) {
   var text=new Array(18);
   text[0] = " ";
-  text[1] = "翻云<br>寨主";
-  text[2] = "藤妖";
-  text[3] = "噬月<br>玄帝";
-  text[4] = "叶<br>沉香";
-  text[5] = "雷严";
-  text[6] = "金<br>蛟翦";
-  text[7] = "鲲鹏";
-  text[8] = "悭臾";
-  text[9] = "陵端";
-  text[10] = "梼杌";
-  text[11] = "蛊雕";
-  text[12] = "巫姑";
-  text[13] = "紫胤<br>真人";
-  text[14] = "穷奇";
-  text[15] = "饕餮";
-  text[16] = "暗云<br>奔霄";
-  text[17] = "欧阳<br>少恭";
+  text[1] = "生铁";
+  text[2] = "松纹";
+  text[3] = "噬月";
+  text[4] = "盘云";
+  text[5] = "霄河";
+  text[6] = "定光";
+  text[7] = "白虹";
+  text[8] = "青冥";
+  text[9] = "墨阳";
+  text[10] = "秋水";
+  text[11] = "玄霜";
+  text[12] = "思召";
+  text[13] = "承影";
+  text[14] = "古剑<br>流光";
+  text[15] = "凶剑<br>血残";
+  text[16] = "劫剑<br>红莲";
+  text[17] = "古剑<br>焚寂";
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
@@ -151,26 +151,26 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(14);
-  mytxt[0]="凡人，找死！";
-  mytxt[1]="晋磊！拿命来！";
-  mytxt[2]="少恭，你还嫩了点！";
-  mytxt[3]="说了要一起上吧！";
-  mytxt[4]="请无异来帮忙吧！";
-  mytxt[5]="吾友，你弱了！";
-  mytxt[6]="我甩发，我自信！";
-  mytxt[7]="太弱了！";
-  mytxt[8]="凡人，自寻死路！";
-  mytxt[9]="你们还差了点！";
-  mytxt[10]="徒儿，随为师回山！";
-  mytxt[11]="神兽果然勇猛！";
-  mytxt[12]="真是美味啊！";
-  mytxt[13]="你见不到少恭了！→_→";
+  mytxt[0]="连盘云你都打不出来……";
+  mytxt[1]="前面的是天墉城的！";
+  mytxt[2]="恭喜你拿到天墉城的新手武器！";
+  mytxt[3]="定光剑适合你！";
+  mytxt[4]="你只能用白虹了！";
+  mytxt[5]="青冥剑誓……";
+  mytxt[6]="秋水合成失败！";
+  mytxt[7]="玄霜合成失败！";
+  mytxt[8]="思召合成失败！";
+  mytxt[9]="承影合成失败！";
+  mytxt[10]="马上就可以合成高级武器了！";
+  mytxt[11]="前方凶剑血残！";
+  mytxt[12]="劫剑红莲在前面等着你！";
+  mytxt[13]="只差一步了！";
 
 
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "你打败了<strong>欧阳少恭！</strong>" : mytxt[text3(maxscore)-3];
+  var message = won ? "恭喜你合成了<strong>古剑焚寂！</strong>" : mytxt[text3(maxscore)-3];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
