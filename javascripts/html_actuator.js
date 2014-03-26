@@ -193,14 +193,14 @@ HTMLActuator.prototype.clearMessage = function () {
 HTMLActuator.prototype.scoreTweetButton = function () {
   var tweet = document.createElement("a");
   tweet.classList.add("twitter-share-button");
-  tweet.setAttribute("href", "https://twitter.com/share");
-  tweet.setAttribute("data-via", "oprilzeng");
-  tweet.setAttribute("data-url", "http://oprilzeng.github.io/2048/full");
-  tweet.setAttribute("data-counturl", "http://oprilzeng.github.io/2048/full/");
+  tweet.setAttribute("href", "http://service.weibo.com/share/share.php");
+  tweet.setAttribute("data-via", "拔剑断愁");
+  tweet.setAttribute("data-url", "http://bjdc.github.io");
+  tweet.setAttribute("data-counturl", "http://bjdc.github.io");
   tweet.textContent = "炫耀一下";
 
-  var text = "I scored " + this.score + " points at PRC2048-Full edition, a game where you " +
-             "join numbers to score high! #PRC2048";
+  var text = "I scored " + this.score + " points at 2048古剑版, a game where you " +
+             "join numbers to score high! #2048古剑版";
   tweet.setAttribute("data-text", text);
 
   return tweet;
