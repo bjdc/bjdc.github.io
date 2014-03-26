@@ -1,4 +1,4 @@
-function HTMLActuator() {
+﻿function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
@@ -67,10 +67,10 @@ HTMLActuator.prototype.addTile = function (tile) {
   text[11] = "玄霜";
   text[12] = "思召";
   text[13] = "承影";
-  text[14] = "古剑<br>流光";
-  text[15] = "凶剑<br>血残";
-  text[16] = "劫剑<br>红莲";
-  text[17] = "古剑<br>焚寂";
+  text[14] = "流光";
+  text[15] = "血残";
+  text[16] = "红莲";
+  text[17] = "焚寂";
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
@@ -151,26 +151,26 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(14);
-  mytxt[0]="连盘云你都打不出来……";
-  mytxt[1]="前面的是天墉城的！";
-  mytxt[2]="恭喜你拿到天墉城的新手武器！";
-  mytxt[3]="定光剑适合你！";
-  mytxt[4]="你只能用白虹了！";
-  mytxt[5]="青冥剑誓……";
-  mytxt[6]="秋水合成失败！";
-  mytxt[7]="玄霜合成失败！";
-  mytxt[8]="思召合成失败！";
-  mytxt[9]="承影合成失败！";
-  mytxt[10]="马上就可以合成高级武器了！";
-  mytxt[11]="前方凶剑血残！";
-  mytxt[12]="劫剑红莲在前面等着你！";
-  mytxt[13]="只差一步了！";
+  mytxt[0]="盘云铸造失败！";
+  mytxt[1]="霄河铸造失败！";
+  mytxt[2]="定光铸造失败！";
+  mytxt[3]="白虹铸造失败！";
+  mytxt[4]="青冥铸造失败！";
+  mytxt[5]="墨阳铸造失败";
+  mytxt[6]="秋水铸造失败！";
+  mytxt[7]="玄霜铸造失败！";
+  mytxt[8]="思召铸造失败！";
+  mytxt[9]="承影铸造失败！";
+  mytxt[10]="古剑流光铸造失败！";
+  mytxt[11]="凶剑血残铸造失败！";
+  mytxt[12]="劫剑红莲铸造失败！";
+  mytxt[13]="古剑焚寂铸造失败！";
 
 
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "恭喜你合成了<strong>古剑焚寂！</strong>" : mytxt[text3(maxscore)-3];
+  var message = won ? "恭喜你成功铸造出上古凶剑<strong>焚寂！</strong>" : mytxt[text3(maxscore)-3];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
@@ -191,17 +191,11 @@ HTMLActuator.prototype.clearMessage = function () {
 };
 
 HTMLActuator.prototype.scoreTweetButton = function () {
+  var text = "我在2048古剑版中得了" + this.score + "分 , 你能得多少分？";
   var tweet = document.createElement("a");
   tweet.classList.add("twitter-share-button");
-  tweet.setAttribute("href", "http://service.weibo.com/share/share.php");
-  tweet.setAttribute("data-via", "拔剑断愁");
-  tweet.setAttribute("data-url", "http://bjdc.github.io");
-  tweet.setAttribute("data-counturl", "http://bjdc.github.io");
-  tweet.textContent = "炫耀一下";
-
-  var text = "I scored " + this.score + " points at 2048古剑版, a game where you " +
-             "join numbers to score high! #2048古剑版";
-  tweet.setAttribute("data-text", text);
+  tweet.setAttribute("href", "http://service.weibo.com/share/share.php?url=http://gjqt.github.io/mainRole&title="+text); 
+  tweet.textContent = "分享到微博";
 
   return tweet;
 };
