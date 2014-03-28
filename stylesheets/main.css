@@ -418,18 +418,61 @@ hr {
     background: #3c3a32; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
-        font-size: 8px; } }
+		font-size:20px;
+		line-height:24px; } }
 
     @media screen and (max-width: 520px) {
-      .tile.tile-64 .tile-inner {
-        font-size: 20px; } }
-    @media screen and (max-width: 520px) {
-      .tile.tile-256 .tile-inner {
-        font-size: 15px; } }
-    @media screen and (max-width: 520px) {
-      .tile.tile-2048 .tile-inner {
+      .tile.tile-2 .tile-inner {
         font-size: 20px;
-        line-height:24px; } }
+		line-height:48px; } 	  
+      .tile.tile-4 .tile-inner {
+        font-size: 20px;
+		line-height:48px; }	  
+      .tile.tile-8 .tile-inner {
+        font-size: 20px;
+		line-height:48px; }
+      .tile.tile-16 .tile-inner {
+        font-size: 20px;
+		line-height:48px; }	  
+      .tile.tile-32 .tile-inner {
+        font-size: 20px;
+		line-height:48px; }
+	  .tile.tile-64 .tile-inner {
+        font-size: 20px;
+		line-height:48px; }
+	  .tile.tile-128 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-256 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-512 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-1024 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-2048 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-4096 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-8192 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-16384 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-32768 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-65536 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } 
+	  .tile.tile-131072 .tile-inner {
+        font-size: 20px;
+		line-height:48px; } }
 
 @-webkit-keyframes appear {
   0% {
