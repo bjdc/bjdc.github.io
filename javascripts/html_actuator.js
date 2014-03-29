@@ -168,7 +168,7 @@ HTMLActuator.prototype.message = function (won) {
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "恭喜您成功铸造出上古凶剑<strong>焚寂！</strong>" : mytxt[text3(maxscore)-3];
+  var message = won ? "恭喜您成功铸造出上古凶剑焚寂！" : mytxt[text3(maxscore)-3];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
